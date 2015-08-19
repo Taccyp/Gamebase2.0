@@ -1,0 +1,13 @@
+<%= javascript_include_tag 'search.js' -%>
+<p> hello <%= current_user.email %> </p>
+<% @search.each do |result| %>
+<img src='<%= result["image"]["icon_url"] unless result["image"].nil? %>' >
+<p> <%= result["name"] %> </p>
+<p> <%= result["deck"] %> </p>
+
+	<%= form_for Game.new, remote: true do |f| %>
+	<%= f.hidden_field :game_id, :value => result["id"] %>
+	<%= submit_tag "Add to Collection", :class => 'add_collection_button' %>
+
+	<%end%>
+<%end%>

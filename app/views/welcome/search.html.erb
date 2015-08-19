@@ -1,0 +1,5 @@
+<% @search.each do |result| %>
+<img src='<%= result["image"]["icon_url"] unless result["image"].nil? %>' >
+<p> <%= result["name"] %> </p>
+<p> <%= result["deck"] %> </p>
+<%end%>

@@ -1,0 +1,44 @@
+ <%= stylesheet_link_tag    'home' %>
+<div class="container-fluid">
+	<div class="row" id="header">
+		<div class="col-xs-12">
+			<div id="header_content">
+			<span> GameBase </span>
+			<span id="nav">
+				<ul>
+					<li><%= link_to "Sign in", new_user_session_path %></li>
+					<li><%= link_to "Sign up", new_user_registration_path %></li>
+				</ul>
+			</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12">
+			<form id="game_search" class="form-inline" method="GET" action="/search">
+			  <div class="form-group">
+			    <label for="exampleInputName2"></label>
+			    <input type="text" class="form-control" id="exampleInputName2" placeholder="Search for a game" name="search_input">
+			  </div>
+			  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i>Search</button>
+			</form>
+			<div id="blurb">
+				<h1> GameBase </h1>
+					<h2> What is GameBase? </h2>
+						<ul>
+							<li> An app for game collectors and enthusiasts. If you need a place to keep track of your vast game collection, you've  come to the right place.</li>
+							<li> It runs on the <a href="http://www.giantbomb.com">Giantbomb.com</a> API, which is the most robust gaming wiki on the internet. If a game isn't there, it probably doesnt exist.</li>
+							<li>Rate and review your games. Share your collection with the world! </li>
+						</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
