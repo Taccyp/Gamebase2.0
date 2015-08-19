@@ -1,3 +1,8 @@
-<p><%= current_user.email %>'s  Collection</p>
+<p><%= current_user.email unless current_user.nil? == true %>'s  Collection</p>
 
 <p> games owned: <%= current_user.games.count %> </p>
+
+ <% @collection.each do |a| %> 
+ <%  @game_info = @api_hit.game_by_id(a.game_id)  %>
+ <%= @game_info["results"]["name"] %>
+ <%end%>
