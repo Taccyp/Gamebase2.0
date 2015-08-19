@@ -3,6 +3,9 @@
 <p> games owned: <%= current_user.games.count %> </p>
 
  <% @collection.each do |a| %> 
- <%  @game_info = @api_hit.game_by_id(a.game_id)  %>
- <%= @game_info["results"]["name"] %>
+ <%= a.game_name %>
+ <%= a.platforms %>
  <%end%>
+
+
+

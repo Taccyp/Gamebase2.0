@@ -1,12 +1,15 @@
-<!--<%= javascript_include_tag 'search.js' -%>-->
-<!--<p> hello <%= current_user.email %> </p>-->
+
+<p> hello <%= current_user.email unless current_user.nil? %> </p>
 <% @search.each do |result| %>
 <img src='<%= result["image"]["icon_url"] unless result["image"].nil? %>' >
 <p> <%= result["name"] %> </p>
 <p> <%= result["deck"] %> </p>
+<p> <%= result["developer"] %> </p>
 
 	<%= form_for Game.new, remote: true do |f| %>
 	<%= f.hidden_field :game_id, :value => result["id"] %>
+	<%= f.hidden_field :game_name, :value => result["name"] %>
+	<%= f.hidden_field :platforms, :value => result["platforms"] %>
 	<%= submit_tag "Add to Collection", :class => 'add_collection_button', data: { disable_with: "Added" } %>
 
 	<%end%>

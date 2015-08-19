@@ -3,6 +3,8 @@ class CreateGames < ActiveRecord::Migration
     create_table :games do |t|
       t.integer :user_id
       t.string :game_id
+      t.string :game_name
+      t.string :platforms
 
       t.timestamps null: false
     end
