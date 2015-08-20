@@ -5,12 +5,15 @@
 <p> <%= result["name"] %> </p>
 <p> <%= result["deck"] %> </p>
 <p> <%= result["developer"] %> </p>
-	
+
+<% if Game.exists?(:game_id => result["id"]) %>
+<p> in your collection </p>
+<%else%>
 	<%= form_for Game.new, remote: true do |f| %>
 	<%= f.hidden_field :game_id, :value => result["id"] %>
 	<%= f.hidden_field :game_name, :value => result["name"] %>
 	<%= f.hidden_field :platforms, :value => result["platforms"] %>
 	<%= submit_tag "Add to Collection", :class => 'add_collection_button', :id=> result["id"] %>
-
+		<%end%>
 	<%end%>
 <%end%>
