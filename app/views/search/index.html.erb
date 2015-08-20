@@ -1,32 +1,10 @@
-
+<% javascript_include_tag 'search' %>
 <p> hello <%= current_user.email unless current_user.nil? %> </p>
 <% @search.each do |result| %>
 <img src='<%= result["image"]["icon_url"] unless result["image"].nil? %>' >
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$(".add_collection_button").click(function(){
-			$(this).val("Added");
-			});
-	$('form').submit(function(){
-    $(this).find('input[type=submit]').prop('disabled', true);
-});
-});
-		
-	
-
-</script>
 <p> <%= result["name"] %> </p>
 <p> <%= result["deck"] %> </p>
 <p> <%= result["developer"] %> </p>
-
-<% current_user.games.each do |a|%>
-<% if a.game_id == result["id"] %>
-<p> in collection </p>
-<% end %> 
-<%end%>
-
-
 	
 	<%= form_for Game.new, remote: true do |f| %>
 	<%= f.hidden_field :game_id, :value => result["id"] %>
