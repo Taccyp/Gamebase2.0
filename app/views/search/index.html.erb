@@ -10,17 +10,19 @@
 	<% if !result["original_release_date"].nil? %>
 	<p><%=Date.parse(result["original_release_date"]).year %></p>
 	<%end%>
-	<p> <%= result["name"] %> </p>
+	<h2> <%= result["name"] %> </h2>
 	<p> <%= result["deck"] %> </p>
 		<% if !result["platforms"].nil? %>
-	 		<% result["platforms"].each do |platform| %>
-	 			<span> Platforms:<%= platform["name"] %></span>
+	 		<span id="platform_list"> Platforms:<% result["platforms"].each do |platform| %>
+	 			<%= platform["name"] %>
+	 		</span>
 	 	<%end%>
 
 	 <%end%>
 
 	<% if  !current_user.nil? and Game.where(user_id: current_user.id).exists?(:game_id => result["id"]) %>
 	<p> in your collection </p>
+	
 	<%else%>
 		<%= form_for Game.new, remote: true do |f| %>
 		<%= f.hidden_field :game_id, :value => result["id"] %>
