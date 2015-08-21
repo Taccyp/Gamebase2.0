@@ -1,11 +1,13 @@
+<div id="user_info">
 <p><%= current_user.email unless current_user.nil? == true %>'s  Collection</p>
 
 <p> games owned: <%= current_user.games.count %> </p>
+</div>
 
  <% @collection.each do |a| %> 
  <div class="game_block">
- <%= a.game_name %>
- <%= a.platforms %>
+ <img src="<%= a.img_url %>">
+ <h3><%= a.game_name %></h3>
+ <p> Platforms:<%= a.platforms %>
 </div>
  <%end%>
-

@@ -7,9 +7,17 @@
 <div class="search_results_container">
 	<% @search.each do |result| %>
 	<img src='<%= result["image"]["icon_url"] unless result["image"].nil? %>' >
+	<% if !result["original_release_date"].nil? %>
+	<p><%=Date.parse(result["original_release_date"]).year %></p>
+	<%end%>
 	<p> <%= result["name"] %> </p>
 	<p> <%= result["deck"] %> </p>
-	<p> <%= result["developer"] %> </p>
+		<% if !result["platforms"].nil? %>
+	 		<% result["platforms"].each do |platform| %>
+	 			<span> Platforms:<%= platform["name"] %></span>
+	 	<%end%>
+
+	 <%end%>
 
 	<% if  !current_user.nil? and Game.where(user_id: current_user.id).exists?(:game_id => result["id"]) %>
 	<p> in your collection </p>
