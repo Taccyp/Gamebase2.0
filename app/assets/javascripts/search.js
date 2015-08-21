@@ -1,5 +1,5 @@
 $(document).ready(function(){
-		$(".btn").click(function(){
+		$(".btn-success").click(function(){
 			$(this).val("Added");
 			$(this).toggleClass("btn-danger");
 			});

@@ -66,7 +66,11 @@ body {
 	color: $color3;
 }
 
-.btn {
+.btn-default {
+	width: 70px;
+}
+
+.btn-success {
 	width: 150px;
 	text-align: center;
 }

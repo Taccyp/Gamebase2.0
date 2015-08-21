@@ -18,6 +18,7 @@
 		<%= f.hidden_field :game_id, :value => result["id"] %>
 		<%= f.hidden_field :game_name, :value => result["name"] %>
 		<%= f.hidden_field :platforms, :value => result["platforms"] %>
+		<%= f.hidden_field :img_url, :value => result["image"]["icon_url"] unless result["image"].nil?  %>
 		<%= submit_tag "Add to Collection", :class => 'btn btn-success', :id=> result["id"] %>
 			<%end%>
 		<%end%>

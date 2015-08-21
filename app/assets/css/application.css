@@ -51,7 +51,10 @@ body {
 #header_content a {
   color: #fbb611; }
 
-.btn {
+.btn-default {
+  width: 70px; }
+
+.btn-success {
   width: 150px;
   text-align: center; }
 
