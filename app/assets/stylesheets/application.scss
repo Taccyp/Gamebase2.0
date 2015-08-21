@@ -48,15 +48,14 @@ body {
 	background-color: $color1;
 }
 
-#game_search {
-	margin-top: 5px;
-	margin-right: 2px;
-	float: right;
-}
-
 #header_content {
 	margin-top: 20px;
 	font-size: 30px;
+}
+
+#game_search {
+	float: right;
+	margin-right: 300px;
 }
 
 #header_content a {

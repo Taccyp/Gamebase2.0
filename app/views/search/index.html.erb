@@ -1,5 +1,8 @@
 <% javascript_include_tag 'search' %>
 <p> hello <%= current_user.email unless current_user.nil? %> </p>
+<% if @search == [] %>
+<h1> Looks like nothing in the database matched your search ... :( </h1>
+<%end%>
 <% @search.each do |result| %>
 <img src='<%= result["image"]["icon_url"] unless result["image"].nil? %>' >
 <p> <%= result["name"] %> </p>
