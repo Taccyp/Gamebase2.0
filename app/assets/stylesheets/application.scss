@@ -23,6 +23,7 @@ body {
 
 #blurb {
 	color: $color3;
+	margin-top: 50px;
 	
 }
 
@@ -39,9 +40,11 @@ body {
 	float: right;
 }
 
+
 #nav li {
 	display: inline-block;
 	margin-left: 5px;
+	font-size: 20px;
 }
 
 #header {
@@ -56,6 +59,7 @@ body {
 #game_search {
 	float: right;
 	margin-right: 300px;
+	margin-top: -10px;
 }
 
 #header_content a {
@@ -64,4 +68,11 @@ body {
 
 #header {
 	height: 5em;
+}
+
+#sign_in_container  {
+	margin: 0 auto;
+	padding-top: 90px;
+	width: 15%;
+
 }

@@ -18,7 +18,8 @@ body {
   font-family: "font-family: " Cabin ", sans-serif;"; }
 
 #blurb {
-  color: #fbb611; }
+  color: #fbb611;
+  margin-top: 50px; }
 
 #blurb h1 {
   font-size: 100px; }
@@ -32,7 +33,8 @@ body {
 
 #nav li {
   display: inline-block;
-  margin-left: 5px; }
+  margin-left: 5px;
+  font-size: 20px; }
 
 #header {
   background-color: #56555b; }
@@ -43,12 +45,18 @@ body {
 
 #game_search {
   float: right;
-  margin-right: 300px; }
+  margin-right: 300px;
+  margin-top: -10px; }
 
 #header_content a {
   color: #fbb611; }
 
 #header {
   height: 5em; }
+
+#sign_in_container {
+  margin: 0 auto;
+  padding-top: 90px;
+  width: 15%; }
 
 /*# sourceMappingURL=application.css.map */
