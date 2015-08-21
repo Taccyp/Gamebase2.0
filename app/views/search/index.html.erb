@@ -13,7 +13,7 @@
 	<%= f.hidden_field :game_id, :value => result["id"] %>
 	<%= f.hidden_field :game_name, :value => result["name"] %>
 	<%= f.hidden_field :platforms, :value => result["platforms"] %>
-	<%= submit_tag "Add to Collection", :class => 'add_collection_button', :id=> result["id"] %>
+	<%= submit_tag "Add to Collection", :class => 'btn', :id=> result["id"] %>
 		<%end%>
 	<%end%>
 <%end%>

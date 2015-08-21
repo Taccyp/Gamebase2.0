@@ -1,5 +1,5 @@
 $(document).ready(function(){
-		$(".add_collection_button").click(function(){
+		$(".btn").click(function(){
 			$(this).val("Added");
 			});
 	$('form').submit(function(){
