@@ -66,8 +66,21 @@ body {
 	color: $color3;
 }
 
+.btn {
+	width: 150px;
+	text-align: center;
+}
+
+.btn-danger {
+	width: 150px;
+	text-align: center;
+}
 #header {
 	height: 5em;
+}
+
+.search_results_container {
+	margin-top: 40px;
 }
 
 #sign_in_container  {
