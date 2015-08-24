@@ -1,0 +1,75 @@
+@import 'mixins';
+
+// VITAL CSS
+.gridder{
+    margin-left: 3px;
+    padding: 0px;
+    list-style-type: none;
+}
+.container {
+    width: 90%;
+
+}
+.gridder-list { 
+    display: inline;
+    vertical-align: top;
+}
+
+.gridder-list img {
+    width: 32%;
+    margin-bottom: 5px;
+}
+.gridder-show { 
+    display: block;
+    float: left;
+    width: 100%;
+    position: relative;
+    background: #EEE url('../images/loading-spin.svg') no-repeat center;
+    
+    &.loading{
+        background: #EEE url('../images/loading-spin.svg') no-repeat center;
+    }
+}
+.gridder-content{
+    display: none;
+}
+
+.gridder-list{
+    @include rowMachine(6,1%);
+}
+
+/* */
+.gridder-show{
+    padding: 20px;
+    background: #EEE;
+    margin-bottom: 1%;
+}
+
+.gridder-navigation{
+    .gridder-nav{
+        &.disabled{
+            opacity: .5;
+        }
+    }
+}
+
+
+.gridder-list{
+    cursor: pointer;
+    &:hover{
+        opacity: .8
+    }
+}
+
+.hasSelectedItem{
+    .gridder-list{
+        opacity: .5;
+        &.selectedItem{
+            opacity: 1;
+        }
+    }
+}
+
+.big_img {
+    float:left;
+}

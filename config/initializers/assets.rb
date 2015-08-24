@@ -5,7 +5,11 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( home.css )
 Rails.application.config.assets.precompile += %w( search.js )
-
+Rails.application.config.assets.precompile += %w( masonry.pkgd.js )
+Rails.application.config.assets.precompile += %w( collection.js )
+Rails.application.config.assets.precompile += %w( imagesloaded.pkgd.js )
+Rails.application.config.assets.precompile += %w( gridder.js )
+Rails.application.config.assets.precompile += %w( collection.css )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

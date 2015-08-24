@@ -15,6 +15,7 @@
  */
 @import 'fonts';
 @import 'colors';
+@import 'mixins';
 
 body {
 	background-color: $color2;
@@ -24,9 +25,8 @@ body {
 #blurb {
 	color: $color3;
 	margin-top: 50px;
-	
+ 
 }
-
 #blurb h1 {
 	font-size: 100px;
 }

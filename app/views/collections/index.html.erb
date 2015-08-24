@@ -1,13 +1,24 @@
+<% javascript_include_tag 'collection.js' %>
+<% stylesheet_link_tag 'collection.css' %>
+<% image_path('loading-sping.svg') %>
 <div id="user_info">
 <p><%= current_user.email unless current_user.nil? == true %>'s  Collection</p>
 
 <p> games owned: <%= current_user.games.count %> </p>
 </div>
+<div class="container">
+<ul class="gridder">
+	 <% @collection.each do |a| %>
+	 <% @show_img = APIS::Giantbomb.new.game_by_id(a.game_id)["results"]["image"]["small_url"] %>
+	     <li class="gridder-list" data-griddercontent="#<%= a.game_id %>">
+        <img src="<%= a.img_url%>" />
+    	</li>
+    	<div id="<%= a.game_id%>" class="gridder-content"> 
+    		<img class="big_img" src="<%= @show_img %>">
+    		<div class="game_details"> <%= a.game_name %></div> 
 
- <% @collection.each do |a| %> 
- <div class="game_block">
- <img src="<%= a.img_url %>">
- <h3><%= a.game_name %></h3>
- <p> Platforms:<%= a.platforms %>
+
+    	</div>
+	  <%end%>
+</ul>
 </div>
- <%end%>
