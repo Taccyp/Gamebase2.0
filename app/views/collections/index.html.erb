@@ -17,7 +17,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6"> 
-    		<img class="big_img" src="<%= a.img_url_small %>">
+    		              <img class="big_img" src="<%= a.img_url_small %>">
                     </div>
                
             <div id="game_details" class="col-xs-6"> 
@@ -25,21 +25,20 @@
                <p> <%= @api_hit["deck"] %> </p>
                <p><strong> Developed By:</strong> <%= @api_hit["developers"][0]["name"] unless @api_hit["developers"].nil? %></p>
                <p><strong> Genre: </strong><%= @api_hit["genres"][0]["name"] unless @api_hit["genres"].nil? %></p>
-               <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-6">
-                        rate/review
+                   <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="/games/<%= a.id %>"> rate/review </a>
+                            </div>
+                                <div class="col-xs-6">
+                                    Average Score
+                                </div>
+                        </div>
                     </div>
-                    <div class="col-xs-6">
-                        Average Score:
-                    </div>
-                </div>
-            </div>
             
             </div> 
              </div>
             </div>
-
 
     	</div>
 	  <%end%>
