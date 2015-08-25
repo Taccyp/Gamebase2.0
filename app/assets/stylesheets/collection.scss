@@ -1,10 +1,33 @@
 @import 'mixins';
+@import 'colors';
 
 // VITAL CSS
 .gridder{
     margin-left: 3px;
     padding: 0px;
     list-style-type: none;
+}
+
+#user_info {
+    color: $color5;
+    text-align: center;
+}
+
+#user_info p {
+    font-size: 20px;
+}
+
+#collection_game_name {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#game_details {
+
+}
+
+#collection_container {
+    background-color: white;
 }
 .container {
     width: 90%;
@@ -18,6 +41,7 @@
 .gridder-list img {
     width: 32%;
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 .gridder-show { 
     display: block;
@@ -30,6 +54,10 @@
         background: #EEE url('../images/loading-spin.svg') no-repeat center;
     }
 }
+
+.gridder-show img {
+    float: left;
+}
 .gridder-content{
     display: none;
 }
@@ -38,10 +66,14 @@
     @include rowMachine(6,1%);
 }
 
+.game_wrapper {
+    background-color: white;
+}
+
 /* */
 .gridder-show{
     padding: 20px;
-    background: #EEE;
+    background: white;
     margin-bottom: 1%;
 }
 

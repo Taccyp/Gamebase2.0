@@ -27,7 +27,8 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(game_params)
     @game.user_id = current_user.id 
-    @game.img_url = APIS::Giantbomb.new.game_by_id(@game.game_id)["results"]["image"]["screen_url"]
+    @game.img_url_small = APIS::Giantbomb.new.game_by_id(@game.game_id)["results"]["image"]["screen_url"]
+    @game.img_url_large = APIS::Giantbomb.new.game_by_id(@game.game_id)["results"]["image"]["small_url"]
 
     respond_to do |format|
       if @game.save
@@ -72,6 +73,6 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params.require(:game).permit(:user_id, :game_id, :game_name, :platforms, :img_url)
+      params.require(:game).permit(:user_id, :game_id, :game_name, :platforms, :img_url_small, :img_url_large)
     end
 end

@@ -5,7 +5,8 @@ class CreateGames < ActiveRecord::Migration
       t.string :game_id
       t.string :game_name
       t.string :platforms
-      t.string :img_url
+      t.string :img_url_small
+      t.string :img_url_large
 
       t.timestamps null: false
     end

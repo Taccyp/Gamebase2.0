@@ -18,12 +18,12 @@
 @import 'mixins';
 
 body {
-	background-color: $color2;
+	background-color: white;
 	font-family: $font5;
 }
 
 #blurb {
-	color: $color3;
+	color: $color5;
 	margin-top: 50px;
  
 }
@@ -48,7 +48,7 @@ body {
 }
 
 #header {
-	background-color: $color1;
+	background-color: $color5;
 }
 
 #header_content {
@@ -63,7 +63,7 @@ body {
 }
 
 #header_content a {
-	color: $color3;
+	color: $color5;
 }
 
 .btn-default {

@@ -2,20 +2,43 @@
 <% stylesheet_link_tag 'collection.css' %>
 <% image_path('loading-sping.svg') %>
 <div id="user_info">
-<p><%= current_user.email unless current_user.nil? == true %>'s  Collection</p>
+<h1>Your Collection </h1>
 
 <p> games owned: <%= current_user.games.count %> </p>
 </div>
-<div class="container">
+<div  id="collection_container"class="container">
 <ul class="gridder">
 	 <% @collection.each do |a| %>
-	 <% @show_img = APIS::Giantbomb.new.game_by_id(a.game_id)["results"]["image"]["small_url"] %>
+        <% @api_hit = APIS::Giantbomb.new.game_by_id(a.game_id)["results"] %>
 	     <li class="gridder-list" data-griddercontent="#<%= a.game_id %>">
-        <img src="<%= a.img_url%>" />
+        <img src="<%= a.img_url_small%>" />
     	</li>
-    	<div id="<%= a.game_id%>" class="gridder-content"> 
-    		<img class="big_img" src="<%= @show_img %>">
-    		<div class="game_details"> <%= a.game_name %></div> 
+    	<div  id="<%= a.game_id%>" class="gridder-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6"> 
+    		<img class="big_img" src="<%= a.img_url_small %>">
+                    </div>
+               
+            <div id="game_details" class="col-xs-6"> 
+               <h2 id="collection_game_name"> <%= a.game_name %> </h2>
+               <p> <%= @api_hit["deck"] %> </p>
+               <p><strong> Developed By:</strong> <%= @api_hit["developers"][0]["name"] unless @api_hit["developers"].nil? %></p>
+               <p><strong> Genre: </strong><%= @api_hit["genres"][0]["name"] unless @api_hit["genres"].nil? %></p>
+               <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6">
+                        rate/review
+                    </div>
+                    <div class="col-xs-6">
+                        Average Score:
+                    </div>
+                </div>
+            </div>
+            
+            </div> 
+             </div>
+            </div>
 
 
     	</div>

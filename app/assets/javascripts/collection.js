@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
  // Call Gridder
     $('.gridder').gridderExpander({
@@ -8,8 +7,8 @@ $(document).ready(function(){
         animationSpeed: 400,
         animationEasing: "easeInOutExpo",
         showNav: true,                      // Show Navigation
-        nextText: "Next",                   // Next button text
-        prevText: "Previous",               // Previous button text
+        nextText: "",                   // Next button text
+        prevText: "",               // Previous button text
         closeText: "Close",                 // Close button text
         onStart: function(){
             //Gridder Inititialized

@@ -14,11 +14,11 @@
  *= require_self
  */
 body {
-  background-color: #8c8b90;
+  background-color: white;
   font-family: "font-family: " Cabin ", sans-serif;"; }
 
 #blurb {
-  color: #fbb611;
+  color: #ff4c65;
   margin-top: 50px; }
 
 #blurb h1 {
@@ -37,7 +37,7 @@ body {
   font-size: 20px; }
 
 #header {
-  background-color: #56555b; }
+  background-color: #ff4c65; }
 
 #header_content {
   margin-top: 20px;
@@ -49,7 +49,7 @@ body {
   margin-top: -10px; }
 
 #header_content a {
-  color: #fbb611; }
+  color: #ff4c65; }
 
 .btn-default {
   width: 70px; }

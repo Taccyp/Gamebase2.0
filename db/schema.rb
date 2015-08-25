@@ -18,9 +18,10 @@ ActiveRecord::Schema.define(version: 20150821160532) do
     t.string   "game_id"
     t.string   "game_name"
     t.string   "platforms"
-    t.string   "img_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "img_url_small"
+    t.string   "img_url_large"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "reviews", force: :cascade do |t|

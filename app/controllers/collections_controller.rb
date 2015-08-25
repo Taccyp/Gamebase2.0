@@ -2,7 +2,6 @@ class CollectionsController < ApplicationController
 
 def index 
   @collection = current_user.games
-  
 end
 
 

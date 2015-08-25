@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
+# fixes turbolink jquery issues
+gem 'jquery-turbolinks'
 
 gem 'will_paginate', '~> 3.0.6'
 
