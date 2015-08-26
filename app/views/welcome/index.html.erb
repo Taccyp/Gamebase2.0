@@ -6,16 +6,141 @@
 					<h2> What is GameBase? </h2>
 						<ul>
 							<li> An app for game collectors and enthusiasts. If you need a place to keep track of your vast game collection, you've  come to the right place.</li>
-							<li> It runs on the <a href="http://www.giantbomb.com">Giantbomb.com</a> API, which is the most robust gaming wiki on the internet. If a game isn't there, it probably doesnt exist.</li>
+							<li> It runs on the <strong><a href="http://www.giantbomb.com">Giantbomb.com</a></strong> API, which is the most robust gaming wiki on the internet. If a game isn't there, it probably doesnt exist.</li>
 							<li>Rate and review your games. Share your collection with the world! </li>
 						</ul>
 
 			</div>
 		</div>
 	</div>
+	<!-- DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
+
+<div class="container">
+	<div class="row">
+		<h2>Latest Reviews</h2>
+	</div>
+</div>
+<div class="carousel-reviews broun-block">
+    <div class="container">
+        <div class="row">
+            <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+            
+                <div class="carousel-inner">
+                    <div class="item active">
+                	    <div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+						        <a title="" href="#"><%= @reviews[0].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[0].rating%>'> Score: </div>
+						        <p><%= @reviews[0].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[0].user.email %></a>
+							</div>
+						</div>
+            			<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+						        <a title="" href="#"><%= @reviews[1].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[1].rating%>'> Score: </div>
+						        <p><%= @reviews[1].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[1].user.email %></a>
+							</div>
+						</div>
+					<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+						        <a title="" href="#"><%= @reviews[2].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[2].rating%>'> Score: </div>
+						        <p><%= @reviews[2].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[2].user.email %></a>
+							</div>
+						</div>
+                    </div>
+                    <div class="item">
+                       <div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+						        <a title="" href="#"><%= @reviews[3].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[3].rating%>'> Score: </div>
+						        <p><%= @reviews[3].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[3].user.email %></a>
+							</div>
+						</div>
+            			<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+						        <a title="" href="#"><%= @reviews[4].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[4].rating%>'> Score: </div>
+						        <p><%= @reviews[4].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[4].user.email %></a>
+							</div>
+						</div>
+					<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+						        <a title="" href="#"><%= @reviews[5].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[5].rating%>'> Score: </div>
+						        <p><%= @reviews[5].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[5].user.email %></a>
+							</div>
+						</div>
+                    </div>
+                    <div class="item">
+                      <div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+						        <a title="" href="#"><%= @reviews[6].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[6].rating%>'> Score: </div>
+						        <p><%= @reviews[6].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[6].user.email %></a>
+							</div>
+						</div>
+            			<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+						        <a title="" href="#"><%= @reviews[7].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[7].rating%>'> Score: </div>
+						        <p><%= @reviews[7].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[7].user.email %></a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+						        <a title="" href="#"><%= @reviews[8].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[8].rating%>'> Score: </div>
+						        <p><%= @reviews[8].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[8].user.email %></a>
+							</div>
+						</div>
+                    </div>                    
+                </div>
+                <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-
-
-
+	

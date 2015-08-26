@@ -11,6 +11,7 @@ Rails.application.config.assets.precompile += %w( imagesloaded.pkgd.js )
 Rails.application.config.assets.precompile += %w( gridder.js )
 Rails.application.config.assets.precompile += %w( collection.css )
 Rails.application.config.assets.precompile += %w( review_box.js )
+Rails.application.config.assets.precompile += %w( welcome.js )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

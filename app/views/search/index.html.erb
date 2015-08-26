@@ -14,14 +14,14 @@
 	<p> <%= result["deck"] %> </p>
 		<% if !result["platforms"].nil? %>
 	 		<span id="platform_list"> Platforms:<% result["platforms"].each do |platform| %>
-	 			<%= platform["name"] %>-
+	 			<%= platform["name"] %> 
 	 		</span>
 	 	<%end%>
 
 	 <%end%>
 
 	<% if  !current_user.nil? and Game.where(user_id: current_user.id).exists?(:game_id => result["id"]) %>
-	<p> in your collection </p>
+	<p id="in_collection_notice"> In your collection </p>
 	
 	<%else%>
 		<%= form_for Game.new, remote: true do |f| %>

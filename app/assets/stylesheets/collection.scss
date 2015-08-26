@@ -2,14 +2,14 @@
 @import 'colors';
 
 // VITAL CSS
-.gridder{
+.gridder {
     margin-left: 3px;
     padding: 0px;
     list-style-type: none;
 }
 
 #user_info {
-    color: $color5;
+    color: $color4;
     text-align: center;
 }
 
@@ -23,11 +23,11 @@
 }
 
 #game_details {
-
+    font-size: 20px;
 }
 
 #collection_container {
-    background-color: white;
+    background-color: $color1;
 }
 .container {
     width: 90%;
@@ -44,11 +44,13 @@
     margin-top: 5px;
 }
 .gridder-show { 
+    font-size: 30px;
+    color: $color2;
     display: block;
     float: left;
-    width: 100%;
+    width: 98.55%;
     position: relative;
-    background: #EEE url('../images/loading-spin.svg') no-repeat center;
+    background: $color1 url('../images/loading-spin.svg') no-repeat center;
     
     &.loading{
         background: #EEE url('../images/loading-spin.svg') no-repeat center;
@@ -57,9 +59,21 @@
 
 .gridder-show img {
     float: left;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.gridder-show p {
+    font-size: 15px;
 }
 .gridder-content{
     display: none;
+}
+
+.gridder-close {
+    font-size: 15px;
+    color: red;
+    float: right;
 }
 
 .gridder-list{
@@ -67,15 +81,10 @@
 }
 
 .game_wrapper {
-    background-color: white;
+    background-color: $color1;
 }
 
 /* */
-.gridder-show{
-    padding: 20px;
-    background: white;
-    margin-bottom: 1%;
-}
 
 .gridder-navigation{
     .gridder-nav{
@@ -104,4 +113,22 @@
 
 .big_img {
     float:left;
+}
+
+#star_box {
+    margin-left: 10px;
+}
+
+#score_review_button_wrapper {
+    text-align: center;
+    font-size: 20px;
+}
+
+#stars-existing {
+    font-size: 30px;
+}
+
+.gridder-close {
+    font-size: 30px;
+    margin-right: 5px;
 }

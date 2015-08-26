@@ -5,6 +5,7 @@ class CreateReviews < ActiveRecord::Migration
       t.integer :game_id
       t.string :title
       t.text :body
+      t.integer :rating
 
       t.timestamps null: false
     end

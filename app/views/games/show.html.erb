@@ -1,16 +1,48 @@
 <div id="review_container" class="container-fluid">
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form action="/reviews" method="POST">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="name">
+                                Title</label>
+                            <input name="review[title]" type="text" class="form-control" id="title" placeholder="Enter name" required="required" />
+                        </div>
+                    </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @game.user_id %>
-</p>
-
-<p>
-  <strong>Id:</strong>
-  <%= @game.id %>
-</p>
-
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="name">
+                                Your Review</label>
+                            <textarea name="review[body]" id="body" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Your Review"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+			          <div id="star_box"class="row lead">
+			        	<div id="stars" class="starrr"></div>
+			        	You gave a rating of <span id="count">0</span> star(s)
+						</div>
+                        <input type="hidden" name="review[rating]" value="" id="star_output">
+                        <input type="hidden" name="review[game_id]" value="<%= @game.id %>" id="game_id">
+					</div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                            Submit</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+        	<div id="review_side">
+        		<h1><span id="review_side_small"> You're reviewing</span> <%= @game.game_name %></h1>
+        	</div>
+        </div>
+    </div>
 </div>
+</div>
+

@@ -6,7 +6,7 @@
 
 <p> games owned: <%= current_user.games.count %> </p>
 </div>
-<div  id="collection_container"class="container">
+<div  id="collection_container"class="container-fluid">
 <ul class="gridder">
 	 <% @collection.each do |a| %>
         <% @api_hit = APIS::Giantbomb.new.game_by_id(a.game_id)["results"] %>
@@ -14,6 +14,7 @@
         <img src="<%= a.img_url_small%>" />
     	</li>
     	<div  id="<%= a.game_id%>" class="gridder-content">
+  
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6"> 
@@ -27,13 +28,19 @@
                <p><strong> Genre: </strong><%= @api_hit["genres"][0]["name"] unless @api_hit["genres"].nil? %></p>
                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-6">
-                                <a href="/games/<%= a.id %>"> rate/review </a>
-                            </div>
-                                <div class="col-xs-6">
-                                    Average Score
+                            <div id="score_review_button_wrapper" class="col-xs-12">
+                                <% if a.reviews.first.nil? %>
+                              <form method="GET" action="/games/<%=a.id%>">
+                              <button type="submit"class="btn btn-primary">Rate/Review</button>
+                                </form>
+                                <% else %>
+                                <div id="score_display">
+                                    <div id="stars-existing" class="starrr" data-rating='<%= a.reviews.first.rating%>'> Your Score: </div>
                                 </div>
+                                <%end%>
+                            </div>
                         </div>
+              
                     </div>
             
             </div> 

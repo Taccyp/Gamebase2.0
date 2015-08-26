@@ -11,6 +11,7 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
+    @game = Game.where(id: params[:id]).first
   end
 
   # GET /games/new
@@ -39,6 +40,9 @@ class GamesController < ApplicationController
         format.json { render json: @game.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def avg_user_score
   end
 
   # PATCH/PUT /games/1
