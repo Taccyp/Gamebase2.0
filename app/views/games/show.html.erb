@@ -1,7 +1,7 @@
 <div id="review_container" class="container-fluid">
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="well well-sm">
                 <form action="/reviews" method="POST">
                 <div class="row">
@@ -37,11 +37,10 @@
                 </form>
             </div>
         </div>
-        <div class="col-md-4">
-        	<div id="review_side">
+        <div id="review_side" class="col-md-5">
         		<h1><span id="review_side_small"> You're reviewing</span> <%= @game.game_name %></h1>
+                <img src="<%= @game.img_url_small %>">
         	</div>
-        </div>
     </div>
 </div>
 </div>

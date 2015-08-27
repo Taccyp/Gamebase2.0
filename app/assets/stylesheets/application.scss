@@ -53,7 +53,7 @@ body {
 
 #nav li {
 	display: inline-block;
-	margin-left: 5px;
+	margin-left: 25px;
 	font-size: 20px;
 }
 
@@ -70,6 +70,10 @@ body {
 
 #header_content a {
 	color: $color4;
+}
+
+#header_content a:hover {
+	text-decoration: none;
 }
 
 .btn-default {
@@ -213,7 +217,7 @@ font-size: 24px;
 
 #review_title {
 	color: $color2;
-	font-size: 40px;
+	font-size: 30px;
 }
 
 #review_header {
@@ -235,4 +239,14 @@ font-size: 24px;
 	margin-bottom: 0;
 }
 
+#no_reviews {
+	margin-top: 30px;
+}
 
+#full_review_link {
+	float: left;
+}
+
+#review_side img {
+margin: 0 auto;
+}

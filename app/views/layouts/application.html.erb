@@ -18,7 +18,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Raleway|Roboto+Slab|Poiret+One|Cabin' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div id="header_content">
 			<span id="home_link"> <a href="/">GameBase</a></span>
@@ -27,6 +27,7 @@
 				<ul>
 					<li><%= link_to "Sign-in", new_user_session_path unless !current_user.nil?%></li>
 					<li><%= link_to "Sign-up", new_user_registration_path unless !current_user.nil? %></li>
+					<li> <%= link_to "Reviews", reviews_path %></li>
 					<li id="collection_button"><%= link_to "Your Collecton", collection_path unless current_user.nil? %></li>
 					<li><%= link_to "Sign-Out", destroy_user_session_path, :method => :delete unless current_user.nil?%></li>
 				</ul>

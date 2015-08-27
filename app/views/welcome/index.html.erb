@@ -14,7 +14,9 @@
 		</div>
 	</div>
 	<!-- DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
-
+<% if @reviews.count  <= 0 %>
+<h1> no reviews... </h1>
+<%else%>
 <div class="container">
 	<div class="row">
 		<h2>Latest Reviews</h2>
@@ -29,8 +31,10 @@
                     <div class="item active">
                 	    <div class="col-md-4 col-sm-6">
         				    <div class="block-text rel zmin">
-						        <a title="" href="#"><%= @reviews[0].title %></a>
-							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[0].rating%>'> Score: </div>
+						        <a title="" href="/reviews/<%= @reviews[0].id %>"><%= @reviews[0].title %></a>
+						        <div id="score_display">
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[0].rating %>'>Score: </div>
+								</div>
 						        <p><%= @reviews[0].body %></p>
 							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
 					        </div>
@@ -40,7 +44,7 @@
 						</div>
             			<div class="col-md-4 col-sm-6">
         				    <div class="block-text rel zmin">
-						        <a title="" href="#"><%= @reviews[1].title %></a>
+						        <a title="" href="/reviews/<%= @reviews[1].id %>"><%= @reviews[1].title %></a>
 							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[1].rating%>'> Score: </div>
 						        <p><%= @reviews[1].body %></p>
 							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
@@ -51,7 +55,7 @@
 						</div>
 					<div class="col-md-4 col-sm-6">
         				    <div class="block-text rel zmin">
-						        <a title="" href="#"><%= @reviews[2].title %></a>
+						        <a title="" href="/reviews/<%= @reviews[2].id %>"><%= @reviews[2].title %></a>
 							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[2].rating%>'> Score: </div>
 						        <p><%= @reviews[2].body %></p>
 							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
@@ -64,8 +68,8 @@
                     <div class="item">
                        <div class="col-md-4 col-sm-6">
         				    <div class="block-text rel zmin">
-						        <a title="" href="#"><%= @reviews[3].title %></a>
-							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[3].rating%>'> Score: </div>
+						        <a title="" href="/reviews/<%= @reviews[3].id %>"><%= @reviews[3].title %></a>
+							  <div id="stars-existing" class="starrr" data-rating='<%= @reviews[3].rating %>'>Score: </div>    
 						        <p><%= @reviews[3].body %></p>
 							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
 					        </div>
@@ -75,7 +79,7 @@
 						</div>
             			<div class="col-md-4 col-sm-6">
         				    <div class="block-text rel zmin">
-						        <a title="" href="#"><%= @reviews[4].title %></a>
+						        <a title="" href="/reviews/<%= @reviews[4].id %>"><%= @reviews[4].title %></a>
 							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[4].rating%>'> Score: </div>
 						        <p><%= @reviews[4].body %></p>
 							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
@@ -86,7 +90,7 @@
 						</div>
 					<div class="col-md-4 col-sm-6">
         				    <div class="block-text rel zmin">
-						        <a title="" href="#"><%= @reviews[5].title %></a>
+						        <a title="" href="/reviews/<%= @reviews[5].id %>"><%= @reviews[5].title %></a>
 							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[5].rating%>'> Score: </div>
 						        <p><%= @reviews[5].body %></p>
 							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
@@ -99,7 +103,7 @@
                     <div class="item">
                       <div class="col-md-4 col-sm-6">
         				    <div class="block-text rel zmin">
-						        <a title="" href="#"><%= @reviews[6].title %></a>
+						        <a title="" href="/reviews/<%= @reviews[6].id %>"><%= @reviews[6].title %></a>
 							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[6].rating%>'> Score: </div>
 						        <p><%= @reviews[6].body %></p>
 							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
@@ -110,7 +114,7 @@
 						</div>
             			<div class="col-md-4 col-sm-6">
         				    <div class="block-text rel zmin">
-						        <a title="" href="#"><%= @reviews[7].title %></a>
+						        <a title="" href="/reviews/<%= @reviews[7].id %>"><%= @reviews[7].title %></a>
 							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[7].rating%>'> Score: </div>
 						        <p><%= @reviews[7].body %></p>
 							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
@@ -121,7 +125,7 @@
 						</div>
 						<div class="col-md-4 col-sm-6">
         				    <div class="block-text rel zmin">
-						        <a title="" href="#"><%= @reviews[8].title %></a>
+						        <a title="" href="/reviews/<%= @reviews[8].id %>"><%= @reviews[8].title %></a>
 							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[8].rating%>'> Score: </div>
 						        <p><%= @reviews[8].body %></p>
 							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
@@ -142,5 +146,7 @@
         </div>
     </div>
 </div>
+
+<%end%>
 
 	

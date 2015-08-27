@@ -42,7 +42,7 @@ body {
 
 #nav li {
   display: inline-block;
-  margin-left: 5px;
+  margin-left: 25px;
   font-size: 20px; }
 
 #header_content {
@@ -56,6 +56,9 @@ body {
 
 #header_content a {
   color: #d66360; }
+
+#header_content a:hover {
+  text-decoration: none; }
 
 .btn-default {
   width: 70px; }
@@ -192,7 +195,7 @@ body {
 
 #review_title {
   color: #333333;
-  font-size: 40px; }
+  font-size: 30px; }
 
 #review_header {
   border-top: 1px solid #afa8a2;
@@ -208,5 +211,14 @@ body {
 
 .game_user_header h1 {
   margin-bottom: 0; }
+
+#no_reviews {
+  margin-top: 30px; }
+
+#full_review_link {
+  float: left; }
+
+#review_side img {
+  margin: 0 auto; }
 
 /*# sourceMappingURL=application.css.map */

@@ -35,7 +35,10 @@
                                 </form>
                                 <% else %>
                                 <div id="score_display">
-                                    <div id="stars-existing" class="starrr" data-rating='<%= a.reviews.first.rating%>'> Your Score: </div>
+                                    <div id="stars-existing" class="starrr" data-rating='<%= a.reviews.first.rating%>'> Your Score: </div>         
+                                    <div class="review_link">
+                                    <a  href="/reviews/<%= a.reviews.first.id %>"> Read your review </a>
+                                  </div>
                                 </div>
                                 <%end%>
                             </div>
