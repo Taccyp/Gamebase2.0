@@ -10,6 +10,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
+    @review = Review.where(id: params[:id]).first
   end
 
   # GET /reviews/new

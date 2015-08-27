@@ -1,14 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div id="review_wrapper" class="container">
+	<div class="row">
+		<div id="review_header" class="col-xs-6">
+			<div class="game_user_header">
+				<h1> <%= @review.game.game_name %></h1>
+				<h3> A review by: <%= @review.user.email %> </h3>
+			</div>
+			<div class="review_title_header">
+				<p id="review_title"> <%= @review.title %> </p>
+			</div>
+			<div class="review_stars_header">
+				<div id="stars-existing" class="starrr" data-rating='<%= @review.rating%>'>
+				</div>
+			</div>
+			<div id="review_body" class="col-xs-6">
+				<p> <%= @review.body %>  </p>
+			</div>
+		
+		</div>
+			<div id="review_image" class="col-xs-6">
+				<img src="<%= @review.game.img_url_large %>"
+			</div>
+		</div>
+	</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @review.title %>
-</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @review.body %>
-</p>
-
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+<%= link_to 'Edit', edit_review_path(@review) %>

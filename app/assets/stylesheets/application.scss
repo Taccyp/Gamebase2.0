@@ -199,3 +199,40 @@ font-size: 24px;
 .rel {
     position: relative;
 }
+
+#review_wrapper {
+	margin-top: 70px;
+	color: $color4;
+}
+
+#review_body {
+	color: $color2;
+	padding-top: 10px;
+	margin-top: 5px;
+}
+
+#review_title {
+	color: $color2;
+	font-size: 40px;
+}
+
+#review_header {
+		border-top: 1px solid $color3;
+	border-bottom: 1px solid $color3;
+	padding-bottom: 7px;
+}
+
+.review_stars_header {
+	padding-top: 5px;
+}
+
+.game_user_header h3 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.game_user_header h1 {
+	margin-bottom: 0;
+}
+
+
