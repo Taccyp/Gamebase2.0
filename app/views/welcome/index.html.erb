@@ -1,15 +1,13 @@
 <div class="container-fluid">
-	<div class="row">
 		<div class="col-xs-12">
 			<div id="blurb">
-				<h1> GameBase </h1>
-					<h2> What is GameBase? </h2>
-						<ul>
-							<li> An app for game collectors and enthusiasts. If you need a place to keep track of your vast game collection, you've  come to the right place.</li>
-							<li> It runs on the <strong><a href="http://www.giantbomb.com">Giantbomb.com</a></strong> API, which is the most robust gaming wiki on the internet. If a game isn't there, it probably doesnt exist.</li>
-							<li>Rate and review your games. Share your collection with the world! </li>
-						</ul>
-
+				<div id="blurb_text">
+					<h2> Welcome to GameBase </h2>
+					<p> A simple app to help you search for and rate your games. Let everyone know how awesome your game collection is!</p>
+						<form method="GET" action="/users/sign_up">
+						  <button type="submit" class="btn btn-primary">Get Started</button>
+						 </form>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -146,6 +144,10 @@
         </div>
     </div>
 </div>
+</div>
+
+
+
 
 <%end%>
 

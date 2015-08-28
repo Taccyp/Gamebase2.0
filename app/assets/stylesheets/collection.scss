@@ -9,7 +9,7 @@
 }
 
 #user_info {
-    color: $color4;
+    color: $color2;
     text-align: center;
 }
 
@@ -24,6 +24,10 @@
 
 #game_details {
     font-size: 20px;
+}
+
+#game_details h2, p {
+    margin: 0;
 }
 
 #collection_container {
@@ -134,5 +138,5 @@
 }
 
 .review_link {
-    padding-top: 10px;
+    padding-top: 5px;
 }

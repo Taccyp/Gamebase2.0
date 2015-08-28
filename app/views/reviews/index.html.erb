@@ -5,7 +5,7 @@
 <div id="review_wrapper" class="container">
   <% @reviews.each do |a| %>
   <div id="reviews_box_index" class="row">
-    <div id="review_header" class="col-xs-6">
+    <div id="review_header" class="col-xs-12">
       <div class="game_user_header">
         <h1> <%= a.game.game_name unless a.game.game_name.nil? %></h1>
         <h3> A review by: <%= a.user.email unless a.user.email.nil? %> </h3>
@@ -23,5 +23,6 @@
     </div>
   </div>
   <%end%>
+</div>
 
   <%end%>

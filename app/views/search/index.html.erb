@@ -1,9 +1,9 @@
 <% javascript_include_tag 'search' %>
 <p> hello <%= current_user.email unless current_user.nil? %> </p>
 <% if @search == [] %>
-<h1> Looks like nothing in the database matched your search ... :( </h1>
+<h1 id="no_search_results"> Looks like nothing in the database matched your search ... :( </h1>
 <%end%>
-
+<div class="container">
 <div class="search_results_container">
 	<% @search.each do |result| %>
 	<img src='<%= result["image"]["icon_url"] unless result["image"].nil? %>' >
@@ -33,4 +33,5 @@
 			<%end%>
 		<%end%>
 	<%end%>
+</div>
 </div>

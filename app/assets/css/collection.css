@@ -4,7 +4,7 @@
   list-style-type: none; }
 
 #user_info {
-  color: #d66360;
+  color: #333333;
   text-align: center; }
 
 #user_info p {
@@ -16,6 +16,9 @@
 
 #game_details {
   font-size: 20px; }
+
+#game_details h2, p {
+  margin: 0; }
 
 #collection_container {
   background-color: #f2f1ed; }
@@ -103,6 +106,6 @@
   margin-right: 5px; }
 
 .review_link {
-  padding-top: 10px; }
+  padding-top: 5px; }
 
 /*# sourceMappingURL=collection.css.map */

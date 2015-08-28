@@ -19,16 +19,72 @@
 
 body {
 	background-color: $color1;
-	font-family: $font5;
+	font-family: $font1;
+
+}
+
+.col-xs-12 {
+	margin: 0;
+	padding: 0;
+}
+
+body a:hover{
+	text-decoration: none;
+	background-color: transparent;
+}
+body a:visited {
+	text-decoration: none;
+
+}
+
+body a:active {
+	text-decoration: none;
+	background-color: transparent
 }
 
 #blurb {
-	color: $color4;
-	margin-top: 50px;
- 
+background-image: url("games.png");
+height: 400px;
+color: white;
+margin: 0;
+padding: 0;
+position: relative;
 }
+
+#blurb_text {
+	margin-left: 70px;
+	margin-top: 200px;
+	height: 180px;
+	width: 650px;
+	background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+}
+
+#blurb_text h2 {
+	margin: 0;
+	padding: 0;
+}
+
+#blurb_text p {
+	font-size: 20px;
+}
+
+#blurb_text button {
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 150px;
+}
+
+#review_wrapper {
+	min-height: 900px;
+}
+
 #review_side_small {
 	font-size:20px;
+}
+
+#review_image {
+	margin:  auto;
 }
 
 #review_side {
@@ -36,6 +92,15 @@ body {
 }
 #blurb h1 {
 	font-size: 100px;
+	vertical-align: middle;
+}
+
+.carousel-inner a {
+	color: $color2;
+}
+
+#no_search_results {
+	margin-top:90px;
 }
 
 #review_container {
@@ -55,6 +120,7 @@ body {
 	display: inline-block;
 	margin-left: 25px;
 	font-size: 20px;
+	height: 100%;
 }
 
 #header_content {
@@ -69,7 +135,8 @@ body {
 }
 
 #header_content a {
-	color: $color4;
+	color: $color2;
+	font-family: $font1;
 }
 
 #header_content a:hover {
@@ -101,6 +168,7 @@ body {
 	margin: 0 auto;
 	padding-top: 90px;
 	width: 15%;
+	min-height: 900px;
 
 }
 
@@ -141,7 +209,7 @@ font-size: 24px;
     padding: 15px 18px;
 }
 .block-text a {
- color: #7d4702;
+ color: $color2;
     font-size: 25px;
     font-weight: bold;
     line-height: 21px;
@@ -189,7 +257,7 @@ font-size: 24px;
     z-index: 2;
 }
 .person-text a {
-    color: $color4;
+    color: white;
     display: block;
     font-size: 14px;
     margin-top: 3px;
@@ -246,7 +314,57 @@ font-size: 24px;
 #full_review_link {
 	float: left;
 }
-
-#review_side img {
-margin: 0 auto;
+#triple_threat {
+	margin-top: 30px;
+	text-align: center;
+	background: $color1;
+	font-size: 70px;
+	color: $color4;
+	border-bottom: 1px solid $color4;
+	border-top: 1px solid $color4;
 }
+
+#triple_threat p {
+	font-size: 20px;
+}
+
+.sting {
+	margin-bottom: 20px;
+	margin-top:10px;
+}
+
+#footer  {
+    text-align: center;
+    background-color: $color2;
+    color: $color1;
+    height:120px;
+    width: 100%;
+    margin: 0;
+    padding:0;
+    bottom: 0;
+
+}
+
+.container-fluid {
+    padding: 0px;
+    margin: 0px;
+}
+
+#footer a {
+    color: $color1;
+    font-family: $font1;
+
+}
+
+#footer p {
+	margin-top: 30px;
+}
+
+#sign_up_form {
+min-height: 900px;
+margin: 0 auto;
+padding-top: 90px;
+width: 15%;
+}
+
+
