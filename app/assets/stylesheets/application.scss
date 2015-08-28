@@ -313,6 +313,11 @@ font-size: 24px;
 	font-size: 30px;
 }
 
+#review_title_header a:hover {
+	color: $color2;
+	text-decoration: none;
+}
+
 #review_header {
 		border-top: 1px solid $color3;
 	border-bottom: 1px solid $color3;
@@ -368,6 +373,10 @@ font-size: 24px;
     padding:0;
     bottom: 0;
 
+}
+
+#no_review_user {
+	margin-top: 20px;
 }
 
 #users_index_container {
@@ -521,5 +530,7 @@ width: 15%;
 .grid-item { width: 25%; }
 /* 2 columns */
 .grid-item--width2 { width: 40%; }
+
+
 
 
