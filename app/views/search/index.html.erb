@@ -3,15 +3,16 @@
 <% if @search == [] %>
 <h1 id="no_search_results"> Looks like nothing in the database matched your search ... :( </h1>
 <%end%>
-<div class="container">
-<div class="search_results_container">
+<div id="search_results_container"class="container">
+<div>
 	<% @search.each do |result| %>
+	<div class="search_result">
+	<h2> <%= result["name"] %> </h2>
 	<img src='<%= result["image"]["icon_url"] unless result["image"].nil? %>' >
 	<% if !result["original_release_date"].nil? %>
-	<p><%=Date.parse(result["original_release_date"]).year %></p>
+	<p id="release_year">Released: <%=Date.parse(result["original_release_date"]).year %></p>
 	<%end%>
-	<h2> <%= result["name"] %> </h2>
-	<p> <%= result["deck"] %> </p>
+	<p id="game_deck"> <%= result["deck"] %> </p>
 		<% if !result["platforms"].nil? %>
 	 		<span id="platform_list"> Platforms:<% result["platforms"].each do |platform| %>
 	 			<%= platform["name"] %> 
@@ -19,7 +20,6 @@
 	 	<%end%>
 
 	 <%end%>
-
 	<% if  !current_user.nil? and Game.where(user_id: current_user.id).exists?(:game_id => result["id"]) %>
 	<p id="in_collection_notice"> In your collection </p>
 	
@@ -31,7 +31,9 @@
 		<%= f.hidden_field :img_url, :value => result["image"]["icon_url"] unless result["image"].nil?  %>
 		<%= submit_tag "Add to Collection", :class => 'btn btn-success', :id=> result["id"] %>
 			<%end%>
+			</div>
 		<%end%>
 	<%end%>
-</div>
+	
+	</div>
 </div>

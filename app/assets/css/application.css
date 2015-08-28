@@ -60,14 +60,34 @@ body a:active {
   margin-top: 20px;
   width: 150px; }
 
+#release_year {
+  font-size: 15px; }
+
+#search_results_container {
+  margin-top: 30px; }
+
+.search_result {
+  border-bottom: 1px solid #333333;
+  padding-bottom: 7px; }
+
 #review_wrapper {
   min-height: 900px; }
+
+#platforms_list {
+  font-size: 15px; }
+
+#game_deck {
+  font-size: 20px; }
 
 #review_side_small {
   font-size: 20px; }
 
 #review_image {
   margin: auto; }
+
+#in_collection_notice {
+  color: red;
+  font-size: 30px; }
 
 #review_side {
   color: #333333; }
