@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 20150821160532) do
     t.string   "platforms"
     t.string   "img_url_small"
     t.string   "img_url_large"
+    t.string   "deck"
+    t.string   "developers"
+    t.string   "genre"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

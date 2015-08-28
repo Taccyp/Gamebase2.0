@@ -2,9 +2,9 @@
 <% stylesheet_link_tag 'collection.css' %>
 <% image_path('loading-sping.svg') %>
 <div id="user_info">
-<h1>Your Collection </h1>
+<h1><%= @user.email %>'s collection </h1>
 
-<p> games owned: <%= current_user.games.count %> </p>
+<p> games owned: <%= @user.games.count %> </p>
 </div>
 <div  id="collection_container"class="container-fluid">
 <ul class="gridder">
@@ -29,12 +29,10 @@
                         <div class="row">
                             <div id="score_review_button_wrapper" class="col-xs-12">
                                 <% if a.reviews.first.nil? %>
-                              <form method="GET" action="/games/<%=a.id%>">
-                              <button type="submit"class="btn btn-primary">Rate/Review</button>
-                                </form>
+                              <h2> They haven't reviewed this game </h2>
                                 <% else %>
                                 <div id="score_display">
-                                    <div id="stars-existing" class="starrr" data-rating='<%= a.reviews.first.rating%>'> Your Score: </div>         
+                                    <div id="stars-existing" class="starrr" data-rating='<%= a.reviews.first.rating%>'> Their Score: </div>         
                                     <div class="review_link">
                                     <a  href="/reviews/<%= a.reviews.first.id %>"> Read your review </a>
                                   </div>

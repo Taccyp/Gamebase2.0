@@ -1,0 +1,15 @@
+<div class="grid">
+	<% @users.each do |a| %>
+	
+  <!-- width of .grid-sizer used for columnWidth -->
+  <div class="grid-sizer"></div>
+  <div class="grid-item">
+  	<h2> <%= a.email %></h2>
+  	<h2> Games Owned <%= a.games.count %> </h2>
+  	<h2> <a href="/users/<%= a.id %>">Their Collection </a>
+  </div>
+  <div class="grid-item grid-item--width2"></div>
+
+	<%end%>
+</div>
+

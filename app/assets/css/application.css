@@ -319,6 +319,10 @@ body a:active {
   padding: 0;
   bottom: 0; }
 
+#users_index_container {
+  margin-top: 30px;
+  min-height: 900px; }
+
 .container-fluid {
   padding: 0px;
   margin: 0px; }
@@ -329,6 +333,9 @@ body a:active {
 
 #footer p {
   margin-top: 30px; }
+
+#empty_site {
+  min-height: 900px; }
 
 #sign_up_form {
   min-height: 900px;
@@ -467,5 +474,18 @@ body a:active {
 
 .flickr_pagination .next_page {
   margin-left: 1em; }
+
+/* fluid 5 columns */
+.grid {
+  margin-top: 50px;
+  min-height: 900px; }
+
+.grid-sizer,
+.grid-item {
+  width: 25%; }
+
+/* 2 columns */
+.grid-item--width2 {
+  width: 40%; }
 
 /*# sourceMappingURL=application.css.map */

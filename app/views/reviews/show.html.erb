@@ -1,6 +1,6 @@
 <div id="review_wrapper" class="container">
 	<div class="row">
-		<div id="review_header" class="col-xs-6">
+		<div id="review_header" class="col-xs-12">
 			<div class="game_user_header">
 				<h1> <%= @review.game.game_name %></h1>
 				<h3> A review by: <%= @review.user.email %> </h3>
@@ -17,8 +17,154 @@
 			</div>
 		
 		</div>
-			<div id="review_image" class="col-xs-6">
-				<img src="<%= @review.game.img_url_large %>">
+			<div id="review_image" class="col-xs-12">
+				<% if @reviews.count  <= 0 %>
+<h1> no reviews... </h1>
+<%else%>
+<div class="container">
+	<div class="row">
+		<h2>Latest Reviews</h2>
+	</div>
+</div>
+<div class="carousel-reviews broun-block">
+    <div class="container">
+        <div class="row">
+            <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+            
+                <div class="carousel-inner">
+                    <div class="item active">
+                	    <div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+        				    	<h2><%= @reviews[0].game.game_name%></h2>
+						        <a title="" href="/reviews/<%= @reviews[0].id %>"><%= @reviews[0].title %></a>
+						        <div id="score_display">
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[0].rating %>'>Score: </div>
+								</div>
+						        <p><%= @reviews[0].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[0].user.email %></a>
+							</div>
+						</div>
+            			<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+        				    	<h2><%= @reviews[1].game.game_name%></h2>
+						        <a title="" href="/reviews/<%= @reviews[1].id %>"><%= @reviews[1].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[1].rating%>'> Score: </div>
+						        <p><%= @reviews[1].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[1].user.email %></a>
+							</div>
+						</div>
+					<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+        				    	<h2><%= @reviews[2].game.game_name%></h2>
+						        <a title="" href="/reviews/<%= @reviews[2].id %>"><%= @reviews[2].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[2].rating%>'> Score: </div>
+						        <p><%= @reviews[2].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[2].user.email %></a>
+							</div>
+						</div>
+                    </div>
+                    <div class="item">
+                       <div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+        				    	<h2><%= @reviews[3].game.game_name%></h2>
+						        <a title="" href="/reviews/<%= @reviews[3].id %>"><%= @reviews[3].title %></a>
+							  <div id="stars-existing" class="starrr" data-rating='<%= @reviews[3].rating %>'>Score: </div>    
+						        <p><%= @reviews[3].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[3].user.email %></a>
+							</div>
+						</div>
+            			<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+        				    	<h2><%= @reviews[4].game.game_name%></h2>
+						        <a title="" href="/reviews/<%= @reviews[4].id %>"><%= @reviews[4].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[4].rating%>'> Score: </div>
+						        <p><%= @reviews[4].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[4].user.email %></a>
+							</div>
+						</div>
+					<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+        				    	<h2><%= @reviews[5].game.game_name%></h2>
+						        <a title="" href="/reviews/<%= @reviews[5].id %>"><%= @reviews[5].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[5].rating%>'> Score: </div>
+						        <p><%= @reviews[5].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[5].user.email %></a>
+							</div>
+						</div>
+                    </div>
+                    <div class="item">
+                      <div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+        				    	<h2><%= @reviews[6].game.game_name%></h2>
+						        <a title="" href="/reviews/<%= @reviews[6].id %>"><%= @reviews[6].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[6].rating%>'> Score: </div>
+						        <p><%= @reviews[6].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[6].user.email %></a>
+							</div>
+						</div>
+            			<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+        				    	<h2><%= @reviews[7].game.game_name%></h2>
+						        <a title="" href="/reviews/<%= @reviews[7].id %>"><%= @reviews[7].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[7].rating%>'> Score: </div>
+						        <p><%= @reviews[7].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[7].user.email %></a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+        				    <div class="block-text rel zmin">
+        				    	<h2><%= @reviews[8].game.game_name%></h2>
+						        <a title="" href="/reviews/<%= @reviews[8].id %>"><%= @reviews[8].title %></a>
+							   <div id="stars-existing" class="starrr" data-rating='<%= @reviews[8].rating%>'> Score: </div>
+						        <p><%= @reviews[8].body %></p>
+							    <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+					        </div>
+							<div class="person-text rel">
+								<a title="" href="#"><%= @reviews[8].user.email %></a>
+							</div>
+						</div>
+                    </div>                    
+                </div>
+                <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<%end%>
 			</div>
 		</div>
 	</div>

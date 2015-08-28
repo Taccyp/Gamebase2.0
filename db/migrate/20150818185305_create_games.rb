@@ -7,6 +7,9 @@ class CreateGames < ActiveRecord::Migration
       t.string :platforms
       t.string :img_url_small
       t.string :img_url_large
+      t.string :deck
+      t.string :developers
+      t.string :genre
 
       t.timestamps null: false
     end

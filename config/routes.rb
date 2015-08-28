@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   get '/collection' => 'collections#index'
+  resources :users, only: [:show, :index]
   resources :search, only: :index
 
   # Example of regular route:
