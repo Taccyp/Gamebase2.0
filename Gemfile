@@ -17,6 +17,8 @@ gem 'devise'
 # fixes turbolink jquery issues
 gem 'jquery-turbolinks'
 
+gem 'rails_12factor'
+
 gem 'will_paginate', '~> 3.0.6'
 
 # Use jquery as the JavaScript library
