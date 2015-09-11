@@ -13,8 +13,11 @@ class APIS::Giantbomb
   end
 
   def hit_api(inputstring)
-    proxy = Net::HTTP::Proxy("http://quotaguard3596:a62d6d50d42f@us-east-1-static-hopper.quotaguard.com
-      ",9293)
+    proxyurl = "us-east-1-static-hopper.quotaguard.com"
+    proxyport = 9293
+    user = "quotaguard3596"
+    pass = "a62d6d50d42f"
+    proxy = Net::HTTP::Proxy(proxyurl,proxyport,user,pass)
     escapedString = URI::escape(inputstring)
     uri = URI(escapedString)
     JSON.parse(proxy.get(uri))
