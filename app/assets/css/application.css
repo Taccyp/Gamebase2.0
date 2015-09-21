@@ -33,7 +33,7 @@ body a:active {
   background-color: transparent; }
 
 #blurb {
-  background-image: url("games.png");
+  background-color: #333333;
   height: 400px;
   color: white;
   margin: 0;
@@ -41,11 +41,12 @@ body a:active {
   position: relative; }
 
 #blurb_text {
-  margin-left: 70px;
-  margin-top: 200px;
+  text-align: center;
+  margin-left: 28%;
+  margin-right: auto;
+  margin-top: 120px;
   height: 180px;
   width: 650px;
-  background: rgba(0, 0, 0, 0.6);
   position: absolute; }
 
 #blurb_text h2 {
@@ -292,10 +293,15 @@ body a:active {
   margin-bottom: 0; }
 
 #no_reviews {
-  margin-top: 30px; }
+  margin-top: 60px;
+  min-height: 900px; }
 
 #full_review_link {
   float: left; }
+
+  #collection_container {
+    min-height: 900px;
+  }
 
 #triple_threat {
   margin-top: 30px;
